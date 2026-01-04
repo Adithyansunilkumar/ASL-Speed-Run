@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASL Speed Run</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- MediaPipe Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="game-container">
+        <!-- Video Feed & Canvas Overlay -->
+        <div class="video-wrapper">
+            <video class="input_video"></video>
+            <canvas class="output_canvas"></canvas>
+
+            <!-- HUD Overlay -->
+            <div class="hud-overlay">
+                <div class="top-bar">
+                    <div class="score-box">
+                        <span class="label">SCORE</span>
+                        <span class="value" id="score">0</span>
+                    </div>
+                    <div class="timer-box">
+                        <span class="label">TIME</span>
+                        <span class="value" id="timer">0.00</span>
+                    </div>
+                </div>
+
+                <div class="center-message" id="center-message">
+                    <h1>ASL SPEED RUN</h1>
+                    <p>Show your <span class="highlight">Palm</span> to ready and<span class="highlight"> THUMBS
+                            UP</span> to Start</p>
+                </div>
+
+                <div class="target-display" id="target-display" style="display: none;">
+                    <div class="target-letter" id="target-letter">?</div>
+                    <div class="next-letters" id="next-letters"></div>
+                </div>
+
+                <div class="feedback" id="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Instructions / Legend -->
+        <div class="instructions">
+            <h3>GESTURES</h3>
+            <div class="gesture-grid">
+                <div class="gesture-item">
+                    <span class="key">A</span>
+                    <span class="desc">✊</span>
+                </div>
+                <div class="gesture-item">
+                    <span class="key">B</span>
+                    <span class="desc">✋</span>
+                </div>
+                <div class="gesture-item">
+                    <span class="key">L</span>
+                    <span class="desc">👆</span>
+                </div>
+                <div class="gesture-item">
+                    <span class="key">V</span>
+                    <span class="desc">✌️</span>
+                </div>
+                <div class="gesture-item">
+                    <span class="key">Y</span>
+                    <span class="desc">🤙</span>
+                </div>
+                <div class="gesture-item">
+                    <span class="key">👍</span>
+                    <span class="desc">Start</span>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 1rem; opacity: 0.7; font-size: 0.9rem;">Press <span
+                class="highlight">R</span> to Restart</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
