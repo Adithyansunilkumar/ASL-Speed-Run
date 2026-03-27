@@ -27,3 +27,17 @@ A real-time American Sign Language (ASL) speed run game using MediaPipe for hand
     - **L**: L Shape
     - **V**: Peace Sign
     - **Y**: Phone Gesture
+
+## Deployment
+
+The project is ready to be deployed to **Vercel**:
+
+1.  Push the code to a **GitHub/GitLab/Bitbucket** repository.
+2.  Connect the repository to your **Vercel** dashboard.
+3.  Vercel will automatically detect the **Vite** configuration and handle the build process.
+
+You can also use the **Vercel CLI**:
+```bash
+npm install -g vercel
+vercel
+```

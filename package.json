@@ -1,8 +1,10 @@
 {
   "name": "asl-speed-run",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "A high-performance American Sign Language gesture recognition game built with MediaPipe and Vite.",
+  "author": "Adithyan Sunil Kumar",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
